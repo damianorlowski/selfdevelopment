@@ -1,0 +1,14 @@
+Introduction:
+This document describe how to do basic configuration of jetty server in maven.
+
+How to:
+1. Create web module.
+2. In pom.xml of given web module add following plugin:
+     <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>9.2.6.v20141205</version>
+     </plugin>
+3. Assume that you have application divided into modules. So run "mvn clean install" on main pom level.
+4. Go to frontend/web module (the same where you added jetty-maven-plugin) and run "mvn jetty:run"
+5. If everything went ok then you can open browser and type "localhost:8080"
